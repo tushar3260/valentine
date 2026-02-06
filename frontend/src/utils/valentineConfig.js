@@ -80,16 +80,16 @@ export const valentineWeek = [
 
 // Helper Function to check lock status
 // "locked" | "unlocked" | "past"
-// export const getDayStatus = (targetDateString) => {
-//   const today = startOfDay(new Date()); 
-//   const targetDate = startOfDay(new Date(targetDateString));
+export const getDayStatus = (targetDateString) => {
+  const today = startOfDay(new Date()); 
+  const targetDate = startOfDay(new Date(targetDateString));
 
-//   if (isSameDay(today, targetDate)) return "unlocked"; 
-//   if (isBefore(today, targetDate)) return "locked"; 
-//   return "past"; // Past days remain accessible
-// };
+  if (isSameDay(today, targetDate)) return "unlocked"; 
+  if (isBefore(today, targetDate)) return "locked"; 
+  return "past"; // Past days remain accessible
+};
 
 // Development Hack: Sab unlock karne ke liye
-export const getDayStatus = (targetDateString) => {
-  return "unlocked"; // ⚠️ Production/Deploy se pehle is line ko hata dena!
-};
+// export const getDayStatus = (targetDateString) => {
+//   return "unlocked"; // ⚠️ Production/Deploy se pehle is line ko hata dena!
+// };
